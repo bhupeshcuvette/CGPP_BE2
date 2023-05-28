@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend Micro Project 2</title>
+    <link rel="stylesheet" href="../public/recipes.css"/>
+</head>
+<body>
+    <h1 class="main-title">Recipes</h1>
+        <div class="all-recipes">
+            <% recipes.forEach((recipe) =>{%>
+                <div class="ind-recipe">
+                    <h1>Recipe Name : <%=recipe.recipeName%></h1>
+                    <span>Recipe Time : <%=recipe.recipeTime%></span>
+                    <ul>
+                        <% recipe.ingredients.forEach(ingredient => { %>
+                            <li>Ingredients : <%= ingredient %></li>
+                          <% }); %>
+                    </ul>
+                    <p>Serves : <%=recipe.serves%></p>
+                    <form action="/<%= recipe._id %>/delete-recipe" method="post">
+                        <button type="submit">Delete</button>
+                    </form>
+                    <form action="/<%= recipe._id %>/update-recipe" method="get">
+                        <button type="submit">Edit</button>
+                    </form>
+                </div>
+           <% }); %>    
+        </div>
+        <a href="/create-recipe">Add a recipe</a>
+</body>
+</html>

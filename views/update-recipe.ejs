@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Recipe</title>
+    <link rel="stylesheet" href="../public/update-recipe.css"/>
+
+</head>
+<body>
+        <h1> Update Recipe</h1>
+        <form action="/<%= recipe._id %>/update-recipe" method="post">
+        <div class="main-rec-name">
+            <label for="recipeName">Recipe Name : </label>
+            <input type="text" id="recipeName" name="recipeName" value="<%= recipe.recipeName %>">
+        </div>
+        <div class="main-rec-time">
+            <label for="recipeTime">Recipe Time : </label>
+            <input type="text" id="recipeTime" name="recipeTime" value="<%= recipe.recipeTime %>">
+        </div>
+        <div class="main-rec-ingredients">
+            <label for="ingredients">Ingredients : </label>
+            <textarea id="ingredients" name="ingredients"><%= recipe.ingredients %></textarea>
+        </div>
+        <div class="main-rec-serves">
+            <label for="serves">Serves : </label>
+            <input type="text" id="serves" name="serves" value="<%= recipe.serves %>">
+        </div>
+        <button type="submit">Update</button>
+        </form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Recipe</title>
+    <link rel="stylesheet" href="../public/create-recipe.css"/>
+</head>
+<body>
+    <h1 class="title-main"> Create Recipe</h1>
+    <form action="/create-recipe" method="POST">
+    <div class="main-rec-name">
+        <label for="recipeName">Recipe Name : </label>
+        <input type="text" id="recipeName" name="recipeName">
+    </div>
+    <div class="main-rec-time">
+        <label for="recipeTime">Recipe Time : </label>
+        <input type="text" id="recipeTime" name="recipeTime">
+    </div>
+    <div class="main-rec-ingredients">
+        <label for="ingredients">Ingredients : </label>
+        <textarea id="ingredients" name="ingredients"> </textarea>
+    </div>
+    <div class="main-rec-serves">
+        <label for="serves">Serves : </label>
+        <input type="text" id="serves" name="serves">
+    </div>
+    <button type="submit">Create</button>
+    </form>
+</body>
+</html>
